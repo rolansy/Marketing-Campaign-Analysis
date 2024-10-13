@@ -1,0 +1,6 @@
+MarketID,MarketSize,LocationID,AgeOfStore,Promotion,Week,SalesInThousands
+1,Small,101,5,1,1,10.5
+2,Medium,102,10,2,1,15.2
+3,Large,103,15,3,2,20.1
+4,Small,104,8,1,2,14.8
+5,Large,105,12,2,3,19.3
