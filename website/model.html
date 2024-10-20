@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model - Marketing Campaigns</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #2c3e50;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        nav ul li a:hover {
+            background-color: #34495e;
+        }
+        nav ul li a.active {
+            background-color: #2980b9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .model-info {
+            margin-bottom: 30px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .best-model {
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .conclusion {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="about.html">Home</a></li>
+            <li><a href="data-insights.html">Data Insights</a></li>
+            <li><a href="model.html" class="active">Model</a></li>
+            <li><a href="traditional-prediction.html">Traditional Predictions</a></li>
+            <li><a href="online-prediction.html">Online Predictions</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Model Information</h1>
+        
+        <div class="model-info">
+            <h2>Models Used</h2>
+            <p>In our analysis of marketing campaigns, we utilized four different machine learning models to predict and analyze both traditional and online campaign performance:</p>
+            <ul>
+                <li>Decision Tree</li>
+                <li>Random Forest</li>
+                <li>Linear Regression</li>
+                <li>K-Nearest Neighbors (KNN)</li>
+            </ul>
+        </div>
+        
+        <div class="model-info">
+            <h2>Model Evaluation</h2>
+            <p>Each model was evaluated using the following metric:</p>
+            <ul>
+                <li><strong>RMSE (Root Mean Square Error):</strong> Measures the standard deviation of the residuals (prediction errors). Lower values indicate better fit.</li>
+            </ul>
+        </div>
+        
+        <div class="model-info">
+            <h2>Evaluation Results</h2>
+            
+            <h3>Traditional Campaign</h3>
+            <table>
+                <tr>
+                    <th>Model</th>
+                    <th>RMSE</th>
+                </tr>
+                <tr>
+                    <td>Decision Tree</td>
+                    <td>0.3999999999999986</td>
+                </tr>
+                <tr>
+                    <td>Random Forest</td>
+                    <td>0.9570000000000132</td>
+                </tr>
+                <tr>
+                    <td>Linear Regression</td>
+                    <td>0.6253588516746369</td>
+                </tr>
+                <tr class="best-model">
+                    <td>KNN</td>
+                    <td>0.33333333333333215</td>
+                </tr>
+            </table>
+            
+            <h3>Online Campaign</h3>
+            <table>
+                <tr>
+                    <th>Model</th>
+                    <th>RMSE</th>
+                </tr>
+                <tr>
+                    <td>Decision Tree</td>
+                    <td>0.0008333333333333318</td>
+                </tr>
+                <tr>
+                    <td>Random Forest</td>
+                    <td>0.00020277777777774966</td>
+                </tr>
+                <tr>
+                    <td>Linear Regression</td>
+                    <td>0.0007986106651210328</td>
+                </tr>
+                <tr class="best-model">
+                    <td>KNN</td>
+                    <td>9.259259259259203e-05</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="conclusion">
+            <h2>Conclusion</h2>
+            <p>Conclusion: Best Model for Traditional Campaign is KNN based on RMSE.</p>
+            <p>Conclusion: Best Model for Online Campaign is KNN based on RMSE.</p>
+        </div>
+    </div>
+</body>
+</html>
