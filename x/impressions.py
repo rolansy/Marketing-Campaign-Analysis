@@ -4,9 +4,19 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
+# Print the current working directory
+st.write(f"Current working directory: {os.getcwd()}")
+
+# Define the path to the model file
+model_path = os.path.join(os.getcwd(), 'impressions_model.pkl')
+
+# Print the model path
+st.write(f"Model path: {model_path}")
 
 # Load the trained model
-model = joblib.load('impressions_model.pkl')
+model = joblib.load(model_path)
 
 # Load the dataset for analysis
 data = pd.read_csv('data.csv')
