@@ -20,6 +20,10 @@ traditional_df['MarketSize'] = traditional_df['MarketSize'].map({'Small': 1, 'Me
 print(facebook_df.isnull().sum())
 print(traditional_df.isnull().sum())
 
+# Verify column names
+print(facebook_df.columns)
+print(traditional_df.columns)
+
 # Step 4: Exploratory Data Analysis (EDA)
 # Facebook Campaign Data
 plt.figure(figsize=(10, 6))
@@ -30,9 +34,9 @@ plt.ylabel('Clicks')
 plt.show()
 
 plt.figure(figsize=(10, 6))
-sns.scatterplot(x='spent', y='conversions', data=facebook_df)
-plt.title('Spent vs Conversions (Facebook Campaign)')
-plt.xlabel('Spent')
+sns.scatterplot(x='CPC', y='conversions', data=facebook_df)
+plt.title('CPC vs Conversions (Facebook Campaign)')
+plt.xlabel('CPC')
 plt.ylabel('Conversions')
 plt.show()
 
